@@ -1,0 +1,248 @@
+[33mcommit b94b6c6495a7fb592a487c802956eaeec2aff37a[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: Gabrielviscio10 <gonzalo.viscio@icloud.com>
+Date:   Fri Sep 20 18:07:02 2024 +0000
+
+    configurando
+
+[33mcommit 0263d6b2d9185809cfba08a66f065e58f3d72d0e[m
+Merge: 9b4d0d3 b95c85d
+Author: Alejandro Sanchez <aalejo@gmail.com>
+Date:   Thu Nov 9 10:35:29 2023 -0500
+
+    Merge pull request #286 from enaguero/change_flask_cors_to_routes
+    
+    Change flask_cors to be applied after blue print is initalized
+
+[33mcommit b95c85dc628b5e2ae00e7d18d41c6273dbaae509[m
+Author: Erwin Aguero <enaguero@gmail.com>
+Date:   Thu Nov 9 08:45:47 2023 +0000
+
+    Change flask_cors to be applied after blue print is initalized
+
+[33mcommit 9b4d0d388d7cd3145a3cda76601bf6cf971a322b[m
+Merge: 0edb8f2 ab2c385
+Author: Alejandro Sanchez <aalejo@gmail.com>
+Date:   Fri Nov 3 10:36:28 2023 -0400
+
+    Merge pull request #258 from tommygonzaleza/patch-1
+    
+    Webpack config bug on codespaces hot reload fixed
+
+[33mcommit ab2c385a5b6d17bda52a2b3177e99408d2d23bb2[m
+Author: Tomas Gonzalez <56565994+tommygonzaleza@users.noreply.github.com>
+Date:   Fri Sep 8 14:13:41 2023 -0400
+
+    Webpack config bug on codespaces hot reload fixed
+
+[33mcommit 0edb8f2429426346eceac6f65e902417a7e8505c[m
+Author: Alejandro Sanchez <aalejo@gmail.com>
+Date:   Tue Aug 8 13:19:36 2023 -0400
+
+    Update .gitignore
+
+[33mcommit b75581153c51bce5b027795f474a6d1b52ff6295[m
+Merge: 63ea242 bd55d28
+Author: Alejandro Sanchez <aalejo@gmail.com>
+Date:   Tue Aug 8 13:13:17 2023 -0400
+
+    Merge pull request #231 from leomuzicarvalho/overhaul-project-setup
+    
+    Overhaul to project setup - Docs, gitignore, migrations scripts and flask CLI scripts
+
+[33mcommit bd55d28ff6e2c7f2e91e1fda316f0b49411733cc[m
+Author: Leonardo Muzí <leomuzicarvalho@gmail.com>
+Date:   Sat Aug 5 13:20:27 2023 +0000
+
+    add migrations folder to .gitignore / add shortcut command to downgrade migrations / add new CLI to flask to help students persisting example data in their database / update documentation with information for new functionalities
+
+[33mcommit 63ea2421af1db7e77da9183f78b1c3c965e2830a[m
+Author: Alejandro Sanchez <aalejo@gmail.com>
+Date:   Mon Jun 19 12:13:23 2023 -0400
+
+    Update render.yaml
+
+[33mcommit a1d58d91dd67d734a9be8b032ab186066d1e7c20[m
+Author: Alejandro Sanchez <aalejo@gmail.com>
+Date:   Mon Jun 19 12:12:58 2023 -0400
+
+    Update app.py
+
+[33mcommit 2d9bf3f5c5ea39f734b62cf7dc45e1ce5e9a70e2[m
+Author: Alejandro Sanchez <aalejo@gmail.com>
+Date:   Mon Jun 19 12:10:19 2023 -0400
+
+    Update .env.example
+
+[33mcommit 17047b552beb2a51d8a94a5b42b9f0d7e075af3b[m
+Author: Alejandro Sanchez <aalejo@gmail.com>
+Date:   Mon Jun 19 11:48:57 2023 -0400
+
+    Update reset_migrations.bash
+
+[33mcommit 1d9041665862b5d2176803f710a97f44550b1a55[m
+Merge: 9805118 8101446
+Author: Alejandro Sanchez <aalejo@gmail.com>
+Date:   Mon Jun 19 11:36:25 2023 -0400
+
+    Merge pull request #179 from dotfortun/patch-1
+    
+    Made container creation not DIAF if invalid code is committed.
+
+[33mcommit 810144673a07f1773a94e9d6f21f46b52bcf0a9f[m
+Author: Shane B <dotfortun@users.noreply.github.com>
+Date:   Sat Jun 17 14:50:58 2023 -0400
+
+    Made container creation not DIAF if invalid code is committed.
+    
+    Due to how container startup happens, if there's a syntax error in some python files the container will DIAF on startup and lead to the Codespace starting up in safe mode.  A safe mode container can not push code to a repo, so a student can get themselves into a situation where they can not fix their problems in Codespaces.  This patch prevents that situation from happening.
+
+[33mcommit 98051183cb9edfb64d13017b2fa9475da621a2e7[m
+Merge: b2778ae ad848e7
+Author: Alejandro Sanchez <aalejo@gmail.com>
+Date:   Wed Jun 7 14:40:55 2023 -0400
+
+    Merge pull request #167 from Tozzigh/patch-7
+    
+    Updated .env.example to enable correctly DEBUG mode in Flask
+
+[33mcommit ad848e778486d534fbbc5ce910ff624d2a56103f[m
+Author: Tozzigh <61799388+Tozzigh@users.noreply.github.com>
+Date:   Wed Jun 7 20:05:27 2023 +0200
+
+    Updated .env.example to enable correctly DEBUG mode in Flask
+
+[33mcommit b2778ae22b85a98991e308d0f7e6628ca3553c76[m
+Author: Alejandro Sanchez <aalejo@gmail.com>
+Date:   Thu May 4 09:10:24 2023 -0400
+
+    Update settings.json
+
+[33mcommit e48e97f730aea608a4a14d351961c59468182cc5[m
+Merge: f4a1b4d 4df085c
+Author: Alejandro Sanchez <aalejo@gmail.com>
+Date:   Thu May 4 09:09:47 2023 -0400
+
+    Merge pull request #138 from Lorenagubaira/react-flask-hello
+    
+    the settings.json file was updated
+
+[33mcommit 4df085c65315a44ea272991c41261ea642857a40[m
+Author: Alejandro Sanchez <aalejo@gmail.com>
+Date:   Thu May 4 09:09:24 2023 -0400
+
+    Update settings.json
+
+[33mcommit f4a1b4d3de837f8c1c3bee5a24973d10ee1de933[m
+Merge: a74208e 4469c36
+Author: Alejandro Sanchez <aalejo@gmail.com>
+Date:   Thu May 4 09:06:50 2023 -0400
+
+    Merge pull request #151 from Tozzigh/patch-5
+    
+    Update reset_migrations.bash
+
+[33mcommit 4469c3674fc7a1f6fb0092cb58e4b4d5f877fae1[m
+Author: Tozzigh <61799388+Tozzigh@users.noreply.github.com>
+Date:   Thu May 4 09:01:44 2023 +0200
+
+    Update reset_migrations.bash
+
+[33mcommit 2a366518be2dcedd171ace411c8423ececb3f690[m
+Author: Tozzigh <61799388+Tozzigh@users.noreply.github.com>
+Date:   Thu May 4 08:58:56 2023 +0200
+
+    Update reset_migrations.bash
+
+[33mcommit a74208e2c15bd673abced4ce72bde05f0bf13388[m
+Author: Alejandro Sanchez <aalejo@gmail.com>
+Date:   Tue May 2 14:08:16 2023 -0400
+
+    Update .eslintrc
+
+[33mcommit e97ff955243f21efc72c3af733846e8a26847d1a[m
+Author: Alejandro Sanchez <aalejo@gmail.com>
+Date:   Mon Apr 24 20:36:43 2023 -0400
+
+    Update devcontainer.json
+
+[33mcommit 72c665af9108f0d3a63d4fb5d29112a0b1e772d8[m
+Author: Alejandro Sanchez <aalejo@gmail.com>
+Date:   Mon Apr 24 18:56:34 2023 +0000
+
+    added psql commant to connect on the readme
+
+[33mcommit 18c3c77dd78743997c74ba9827b1ce44d59a27bd[m
+Author: Alejandro Sanchez <aalejo@gmail.com>
+Date:   Mon Apr 24 18:52:42 2023 +0000
+
+    added psql
+
+[33mcommit 9f8d9e605a6841b303cd5847c108dfdc43aa60dc[m
+Author: Alejandro Sanchez <aalejo@gmail.com>
+Date:   Mon Apr 24 12:34:49 2023 -0400
+
+    Update webpack.dev.js
+
+[33mcommit 27b5903b68895111b16ad7dae83449752026bb3d[m
+Author: Alejandro Sanchez <aalejo@gmail.com>
+Date:   Fri Apr 21 18:15:56 2023 -0400
+
+    Update .gitpod.yml
+
+[33mcommit 2313daca1dfb3ac0a6d78099bd31eed01f10ee93[m
+Author: lorenagubaira <102861577+Lorenagubaira@users.noreply.github.com>
+Date:   Wed Apr 19 12:08:47 2023 +0000
+
+    the settings.json file was updated
+
+[33mcommit 72872e43d2f350f1d12e8abb10bbafb3ed111f42[m
+Author: Alejandro Sanchez <aalejo@gmail.com>
+Date:   Fri Apr 14 14:21:26 2023 +0000
+
+    second attempt to fix welcome message.
+
+[33mcommit 9d7038ac39d9deb589042b02f881b77c137eb09b[m
+Author: Alejandro Sanchez <aalejo@gmail.com>
+Date:   Fri Apr 14 14:14:48 2023 +0000
+
+    added welcome message for codespaces
+
+[33mcommit 88febc1c634d3f886fd42bce2f9b69d99555b600[m
+Merge: 8d07128 ee183e3
+Author: Alejandro Sanchez <aalejo@gmail.com>
+Date:   Fri Apr 14 09:12:41 2023 -0400
+
+    Merge pull request #120 from JuanPenalver11/patch-1
+    
+    Update README.md
+
+[33mcommit 8d07128e6a4369cdc8fb6f37fbe70d0857412832[m
+Author: Alejandro Sanchez <aalejo@gmail.com>
+Date:   Thu Apr 13 22:30:57 2023 +0000
+
+    config fixes
+
+[33mcommit 93ca9e31cf030bf45507788109d58dcc94855a2a[m
+Author: Alejandro Sanchez <aalejo@gmail.com>
+Date:   Thu Apr 13 21:51:27 2023 +0000
+
+    added devcontainer again
+
+[33mcommit e757a0ae7087ac10f0349f7a1091500fe9c52d4c[m
+Merge: 8e69410 5d6f8d4
+Author: Alejandro Sanchez <aalejo@gmail.com>
+Date:   Thu Apr 13 21:51:10 2023 +0000
+
+    Merge branch 'main' of https://github.com/4GeeksAcademy/react-flask-hello
+
+[33mcommit 8e694105331e80c8d320708a9bcdb3ecf49cadf1[m
+Author: Alejandro Sanchez <aalejo@gmail.com>
+Date:   Thu Apr 13 21:50:48 2023 +0000
+
+    added devcontainer again
+
+[33mcommit 5d6f8d4a4dbf5bbcabb3f4fb3ba6a7bd85826dcd[m
+Author: Alejandro Sanchez <aalejo@gmail.com>
+Date:   Thu Apr 13 17:35:26 2023 -0400
+
+    Upd
