@@ -1,45 +1,16 @@
-"""
-This module takes care of starting the API Server, Loading the DB and Adding the endpoints
-"""
-from flask import Flask, request, jsonify, url_for, Blueprint
+from flask import Flask, request, jsonify, Blueprint
 from api.models import db, User
 from api.utils import generate_sitemap, APIException
 from flask_cors import CORS
-import hmac
-import base64
-import json
-import time
+from flask_jwt_extended import create_access_token, get_jwt_identity, jwt_required, JWTManager
 
 api = Blueprint('api', __name__)
 CORS(api)
 
-SECRET_KEY = 'tu_clave_secreta'  # Cambia esto por una clave más segura
-
-def generate_token(user_id):
-    payload = {
-        'user_id': user_id,
-        'exp': time.time() + 3600  # Token válido por 1 hora
-    }
-    payload_encoded = base64.urlsafe_b64encode(json.dumps(payload).encode()).decode()
-    signature = hmac.new(SECRET_KEY.encode(), payload_encoded.encode(), 'sha256').hexdigest()
-    token = f"{payload_encoded}.{signature}"
-    return token
-
-def verify_token(token):
-    try:
-        payload_encoded, signature = token.split('.')
-        expected_signature = hmac.new(SECRET_KEY.encode(), payload_encoded.encode(), 'sha256').hexdigest()
-        
-        if not hmac.compare_digest(expected_signature, signature):
-            return None
-        
-        payload = json.loads(base64.urlsafe_b64decode(payload_encoded).decode())
-        if payload['exp'] < time.time():
-            return None  # Token expirado
-        
-        return payload['user_id']
-    except Exception:
-        return None
+# Configuración de JWT en el archivo principal (fuera del blueprint)
+app = Flask(__name__)
+app.config['JWT_SECRET_KEY'] = 'clave'  # Cambia esto por una clave más segura
+jwt = JWTManager(app)
 
 @api.route('/hello', methods=['POST', 'GET'])
 def handle_hello():
@@ -47,6 +18,12 @@ def handle_hello():
         "message": "Hello! I'm a message that came from the backend, check the network tab on the google inspector and you will see the GET request"
     }
     return jsonify(response_body), 200
+
+@api.route('/users', methods=['GET'])
+def get_users():
+    users = User.query.all()
+    users_list = [{"id": user.id, "email": user.email} for user in users]
+    return jsonify(users_list), 200
 
 @api.route('/signup', methods=['POST'])
 def signup():
@@ -73,20 +50,14 @@ def login():
     if user is None or not user.check_password(password):
         return jsonify({"message": "Credenciales incorrectas"}), 401
 
-    token = generate_token(user.id)
-    return jsonify({'token': token})
+    # Generar token usando Flask-JWT-Extended
+    access_token = create_access_token(identity=user.id)
+    return jsonify({'token': access_token}), 200
 
 @api.route('/validate', methods=['GET'])
+@jwt_required()  # Proteger la ruta con JWT
 def validate_token():
-    auth_header = request.headers.get('Authorization')
-    if not auth_header:
-        return jsonify({"message": "Authorization header is missing"}), 400
-
-    token = auth_header.split()[1]
-    user_id = verify_token(token)
-    if user_id is None:
-        return jsonify({"message": "Token inválido o expirado"}), 401
-    
+    user_id = get_jwt_identity()  # Obtener la identidad del token JWT
     user = User.query.get(user_id)
     if user:
         return jsonify({"id": user.id, "email": user.email}), 200
@@ -95,5 +66,6 @@ def validate_token():
 
 @api.route('/logout', methods=['POST'])
 def handle_logout():
-    # Lógica para invalidar el token (si es necesario)
+    # No es necesario invalidar el token en el lado del servidor para JWT.
+    # Puedes gestionar la expiración o simplemente eliminar el token en el cliente.
     return jsonify({"message": "Cierre de sesión exitoso"}), 200
