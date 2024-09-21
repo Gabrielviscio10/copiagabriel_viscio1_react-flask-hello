@@ -8,7 +8,7 @@ const getState = ({ getStore, getActions, setStore }) => {
         actions: {
             // Función de registro de usuario
             signup: async (email, password) => {
-                const response = await fetch('URL_DEL_BACKEND/signup', {
+                const response = await fetch('BACKEND_URL/signup', {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify({ email, password }),
@@ -22,7 +22,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 
             // Función de inicio de sesión
             login: async (email, password) => {
-                const response = await fetch('URL_DEL_BACKEND/login', {
+                const response = await fetch('BACKEND_URL/login', {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify({ email, password }),
@@ -33,6 +33,7 @@ const getState = ({ getStore, getActions, setStore }) => {
                     setStore({ token: data.token });
                     return true;
                 } else {
+                    setStore({ message: data.error || "Error en el inicio de sesión" });
                     return false;
                 }
             },
@@ -43,7 +44,7 @@ const getState = ({ getStore, getActions, setStore }) => {
                 const token = store.token;
                 if (!token) return false;
 
-                const response = await fetch('URL_DEL_BACKEND/validate', {
+                const response = await fetch('BACKEND_URL/validate', {
                     headers: { 'Authorization': `Bearer ${token}` },
                 });
                 if (response.ok) {
