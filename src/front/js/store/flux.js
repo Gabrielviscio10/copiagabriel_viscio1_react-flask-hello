@@ -6,7 +6,7 @@ const getState = ({ getStore, getActions, setStore }) => {
         },
         actions: {
             signup: async (email, password) => {
-                const resp = await fetch('BACKEND_URL/api/signup', {
+                const resp = await fetch(`https://crispy-trout-7vrvp9j75r6rfprq7-3001.app.github.dev/api/signup`, {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify({ email, password })
@@ -21,7 +21,7 @@ const getState = ({ getStore, getActions, setStore }) => {
                 }
             },
             login: async (email, password) => {
-                const resp = await fetch('BACKEND_URL/api/login', {
+                const resp = await fetch(`https://crispy-trout-7vrvp9j75r6rfprq7-3001.app.github.dev/api/login`, {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify({ email, password })
@@ -30,6 +30,7 @@ const getState = ({ getStore, getActions, setStore }) => {
                     const data = await resp.json();
                     sessionStorage.setItem('token', data.token);
                     setStore({ token: data.token });
+                    window.location.href="/private"
                     return true;
                 } else {
                     console.error('Error al iniciar sesión');
@@ -38,7 +39,7 @@ const getState = ({ getStore, getActions, setStore }) => {
             },
             validateToken: async () => {
                 const token = getStore().token;
-                const resp = await fetch('BACKEND_URL/api/validate', {
+                const resp = await fetch('https://crispy-trout-7vrvp9j75r6rfprq7-3001.app.github.dev/api/validate', {
                     method: 'GET',
                     headers: { Authorization: `Bearer ${token}` }
                 });
