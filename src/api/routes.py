@@ -8,7 +8,6 @@ from flask_cors import CORS
 
 api = Blueprint('api', __name__)
 
-# Allow CORS requests to this API
 CORS(api)
 
 
@@ -54,15 +53,24 @@ def login():
     return jsonify({'token': token})
 @api.route('/validate', methods=['GET'])
 def validate_token():
-    token = request.headers.get('Authorization').split()[1]
+    auth_header = request.headers.get('Authorization')
+    if not auth_header:
+        return jsonify({"message": "Authorization header is missing"}), 400
+
     try:
-        decoded_token = jwt.decode(token, api.config['SECRET_KEY'], algorithms=['HS256'])
+        token = auth_header.split()[1]
+        decoded_token = jwt.decode(token, app.config['SECRET_KEY'], algorithms=['HS256'])
         user = User.query.get(decoded_token['user_id'])
-        return jsonify({"id": user.id, "email": user.email}), 200
+        if user:
+            return jsonify({"id": user.id, "email": user.email}), 200
+        else:
+            return jsonify({"message": "User not found"}), 404
+    except IndexError:
+        return jsonify({"message": "Bearer token is malformed"}), 400
     except jwt.ExpiredSignatureError:
-        return jsonify({"message": "Token expirado"}), 401
+        return jsonify({"message": "Token expired"}), 401
     except jwt.InvalidTokenError:
-        return jsonify({"message": "Token inválido"}), 401
+        return jsonify({"message": "Invalid token"}), 401
 @api.route('/logout', methods=['POST'])
 def handle_logout():
     # Lógica para invalidar el token (si es necesario)

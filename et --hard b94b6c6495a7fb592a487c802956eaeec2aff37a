@@ -245,4 +245,278 @@ Date:   Thu Apr 13 21:50:48 2023 +0000
 Author: Alejandro Sanchez <aalejo@gmail.com>
 Date:   Thu Apr 13 17:35:26 2023 -0400
 
-    Upd
+    Update .gitignore
+
+[33mcommit 9e52072100c14243e36e6c73824da8dba37e8afb[m
+Author: Alejandro Sanchez <aalejo@gmail.com>
+Date:   Thu Apr 13 21:00:16 2023 +0000
+
+    comatibility with codespaces and gitpod finished
+
+[33mcommit c7052a9258f8cbbdbf86858f5a0023f9f5b1feec[m
+Author: Alejandro Sanchez <aalejo@gmail.com>
+Date:   Wed Mar 29 22:31:52 2023 -0400
+
+    Update README.md
+
+[33mcommit c226c8a2e2cfc6529fe124c4348688fa3e0667fc[m
+Merge: 24fd2f3 bffec2a
+Author: Alejandro Sanchez <aalejo@gmail.com>
+Date:   Mon Mar 13 18:21:15 2023 -0400
+
+    Merge pull request #125 from deimianvasquez/main
+    
+    change python version for deployment
+
+[33mcommit bffec2a838f336cc42df7851cd637f248f749ac7[m
+Author: Deimian Vásquez <deimianvasquez@gmail.com>
+Date:   Wed Mar 8 12:59:58 2023 -0400
+
+    change python version for deployment
+
+[33mcommit ee183e35e1794858c1e1c891b0c150db7fb29c88[m
+Author: Juan Penalver <122556197+JuanPenalver11@users.noreply.github.com>
+Date:   Fri Feb 24 20:00:02 2023 +0100
+
+    Update README.md
+    
+    Falta de ortografía en una palabra
+
+[33mcommit 24fd2f3debc03d2e77ff06fc29300b15d7d0cb31[m
+Author: Alejandro Sanchez <aalejo@gmail.com>
+Date:   Tue Feb 14 00:13:30 2023 -0500
+
+    Update README.md
+
+[33mcommit bde66660ec01a2b56e83d7f14b2bbdbded2afd41[m
+Author: Alejandro Sanchez <aalejo@gmail.com>
+Date:   Tue Feb 14 00:08:23 2023 -0500
+
+    Update README.md
+
+[33mcommit 3c1771b44e4f219dbf82ad4763cb20740e5bc596[m
+Merge: 1d06881 25dffa6
+Author: Tomas Gonzalez <56565994+tommygonzaleza@users.noreply.github.com>
+Date:   Tue Feb 7 13:07:08 2023 -0400
+
+    Merge pull request #116 from arnaldoperez/main
+    
+    Fix SqlAlchemy version and .env file generation
+
+[33mcommit 25dffa6ea78d70eb4fff5051abc7b4089c3b024f[m
+Author: Arnaldo Perez <arnaldo.perez.dev@gmail.com>
+Date:   Wed Feb 1 17:28:04 2023 +0000
+
+    deleted migration
+
+[33mcommit 883943d48d5e43596cc4f28b9e4fb8445cf41ab7[m
+Author: Arnaldo Perez <arnaldo.perez.dev@gmail.com>
+Date:   Wed Feb 1 17:27:32 2023 +0000
+
+    Fix gitpod.yml
+
+[33mcommit 8f18c1242990cf8272a31b331741a3f1062ecd87[m
+Author: Arnaldo Perez <arnaldo.perez.dev@gmail.com>
+Date:   Wed Feb 1 16:53:35 2023 +0000
+
+    Pipfile update and .env file fix
+
+[33mcommit 1d0688126890221305396586a05854f665a24d2f[m
+Merge: 8b95b83 60af2fd
+Author: Alejandro Sanchez <aalejo@gmail.com>
+Date:   Wed Jan 11 23:44:29 2023 -0500
+
+    Merge pull request #84 from Jdvd01/patch-1
+    
+    :arrow_up: [UPDATE] FontAwesome v6.1.2
+
+[33mcommit 8b95b839abf215bdf3b332ed717b8dfb07b4220d[m
+Merge: 57d452a 109df72
+Author: Alejandro Sanchez <aalejo@gmail.com>
+Date:   Wed Jan 11 23:43:50 2023 -0500
+
+    Merge pull request #103 from kant/patch-1
+    
+    Minor fixes (paragraphs 56 & 99)
+
+[33mcommit 109df726d8220e29bc8914ffb1f1b54b5add6312[m
+Merge: c93516f 57d452a
+Author: Alejandro Sanchez <aalejo@gmail.com>
+Date:   Wed Jan 11 23:43:43 2023 -0500
+
+    Merge branch 'main' into patch-1
+
+[33mcommit 57d452a512492405583601ce5ab74a4c2ff76ab5[m
+Merge: e989930 62fbe59
+Author: Tomas Gonzalez <56565994+tommygonzaleza@users.noreply.github.com>
+Date:   Sun Dec 18 14:17:48 2022 -0400
+
+    Merge pull request #112 from Tozzigh/patch-4
+    
+    Please commit merge, workspace not working without this change
+
+[33mcommit 62fbe59bff03f4b991ba19309eb199540972970f[m
+Author: Tozzigh <61799388+Tozzigh@users.noreply.github.com>
+Date:   Sun Dec 18 12:45:53 2022 +0100
+
+    Please commit merge, workspace not working without this change
+
+[33mcommit e989930eca856cff91062de5310ee8fe46d2bbf9[m
+Author: Alejandro Sanchez <aalejo@gmail.com>
+Date:   Mon Dec 12 15:36:09 2022 -0500
+
+    Update render.yaml
+
+[33mcommit fc3a74e8cdd4fc837a32b315c96ca58afff68679[m
+Merge: 1064d3c 29de839
+Author: Alejandro Sanchez <aalejo@gmail.com>
+Date:   Mon Dec 12 15:04:06 2022 -0500
+
+    Merge pull request #109 from dotfortun/patch-1
+    
+    Fix for occasional backend url generation failure
+
+[33mcommit 1064d3cc40c23dbd1d1027ff2de525e6c12908f1[m
+Merge: f3e2615 dd8a9c0
+Author: Alejandro Sanchez <aalejo@gmail.com>
+Date:   Mon Dec 12 15:03:39 2022 -0500
+
+    Merge pull request #111 from lauramagallanes/patch-1
+    
+    Update render_build.sh
+
+[33mcommit dd8a9c0061e4b8b7d82e547159913f447b30ee4e[m
+Author: lauramagallanes <109599459+lauramagallanes@users.noreply.github.com>
+Date:   Fri Dec 9 06:35:24 2022 -0300
+
+    Update render_build.sh
+    
+    Descomenté las lineas 5 y 6, ya que si están comentadas, no permiten hacer el deploy del frontend
+
+[33mcommit f3e26151041d2590f35927fe1a161bfd6b18453e[m
+Author: Tomas Gonzalez <56565994+tommygonzaleza@users.noreply.github.com>
+Date:   Thu Dec 1 12:38:54 2022 -0400
+
+    Update .gitpod.Dockerfile
+
+[33mcommit 29de839d531e16cd4310a14c45ab2e267fcab21e[m
+Author: dotfortun <dotfortun@users.noreply.github.com>
+Date:   Tue Nov 29 09:46:54 2022 -0500
+
+    Fix for occasional backend url generation failure
+    
+    Update BACKEND_URL to use the gp command line utility, this appears to fix the occasional failure to generate the env variable on container start.
+
+[33mcommit 7064d6b120ad1c898a41c34b187b4d636133da56[m
+Author: Alejandro Sanchez <aalejo@gmail.com>
+Date:   Tue Nov 22 20:32:58 2022 -0500
+
+    Update utils.py
+
+[33mcommit f65ffc7acdc0197671d0aa4d3aa715c52a0688c1[m
+Author: Alejandro Sanchez <aalejo@gmail.com>
+Date:   Thu Nov 17 23:58:01 2022 -0500
+
+    Update home.js
+
+[33mcommit 5d3b80e617959e665b612d48ecedb99ec8a72b77[m
+Author: Alejandro Sanchez <aalejo@gmail.com>
+Date:   Thu Nov 17 23:55:11 2022 -0500
+
+    Update README.md
+
+[33mcommit cadf5b28c37f37157b5d58334a6def2978dc2961[m
+Merge: b506a1d 077b570
+Author: Alejandro Sanchez <aalejo@gmail.com>
+Date:   Thu Nov 17 23:39:28 2022 -0500
+
+    Merge pull request #107 from alesanchezr/deploy
+    
+    Deploy
+
+[33mcommit 077b570191ecaab9c291466c154e1ecb6db231b5[m
+Author: Alejandro Sanchez <aalejo@gmail.com>
+Date:   Fri Nov 18 04:17:32 2022 +0000
+
+    ready to merge with main
+
+[33mcommit 92da30a4d5edb720deb6186174ef920bd8fe2d88[m
+Author: Alejandro Sanchez <aalejo@gmail.com>
+Date:   Fri Nov 18 03:17:47 2022 +0000
+
+    migrated
+
+[33mcommit e33932eab28e2d13964fa7d1518e957d3ff668a0[m
+Author: Alejandro Sanchez <aalejo@gmail.com>
+Date:   Fri Nov 18 02:27:54 2022 +0000
+
+    testing boilerplate one more time after updating dockerfile
+
+[33mcommit 9b05651dc13123c38dccf0bdfed1433f6b03cbdb[m
+Author: Alejandro Sanchez <aalejo@gmail.com>
+Date:   Tue Oct 18 17:34:33 2022 +0000
+
+    trying to deploy
+
+[33mcommit 2cb42e4696f42dd06fc49ea387e223cabc61f46b[m
+Author: Alejandro Sanchez <aalejo@gmail.com>
+Date:   Tue Oct 18 16:23:48 2022 +0000
+
+    trying to deploy
+
+[33mcommit f4ab14d4f52ffd62197e20ae0b74f25a02173e05[m
+Author: Alejandro Sanchez <aalejo@gmail.com>
+Date:   Tue Oct 18 15:25:13 2022 +0000
+
+    trying to deploy
+
+[33mcommit 9b8ce06232f0066851e69213f1ae0c954acd345f[m
+Author: Alejandro Sanchez <aalejo@gmail.com>
+Date:   Tue Oct 18 15:23:43 2022 +0000
+
+    trying to deploy
+
+[33mcommit 3ced8dddea0ea9780262ab9114549c21fea40f5f[m
+Author: Alejandro Sanchez <aalejo@gmail.com>
+Date:   Tue Oct 18 15:20:36 2022 +0000
+
+    trying to deploy
+
+[33mcommit e00aab5f542b8baf2da70ae50981f87a277480d2[m
+Author: Alejandro Sanchez <aalejo@gmail.com>
+Date:   Tue Oct 18 15:05:10 2022 +0000
+
+    trying to deploy
+
+[33mcommit 46792da99ecdace87d1369d98e8c74dd4f914988[m
+Author: Alejandro Sanchez <aalejo@gmail.com>
+Date:   Tue Oct 18 14:52:26 2022 +0000
+
+    trying to deploy
+
+[33mcommit 3a662ea40b9d040cc34fd78c96cdc869d84eb2ac[m
+Author: Alejandro Sanchez <aalejo@gmail.com>
+Date:   Tue Oct 18 14:41:11 2022 +0000
+
+    trying to deploy to render
+
+[33mcommit c2ca83a1ed0c5eee649c0c6cf09feae9902a0e71[m
+Author: Alejandro Sanchez <aalejo@gmail.com>
+Date:   Tue Oct 18 14:37:27 2022 +0000
+
+    trying to deploy to render
+
+[33mcommit 8d4c659179cfc7477b856f56b74f4b6830acf459[m
+Author: Alejandro Sanchez <aalejo@gmail.com>
+Date:   Tue Oct 18 00:13:31 2022 +0000
+
+    added render files
+
+[33mcommit 870ac543cdeaf8791de1167093369b1f8fb10f06[m
+Author: Alejandro Sanchez <aalejo@gmail.com>
+Date:   Tue Oct 18 00:08:09 2022 +0000
+
+    added render files
+
+[33mcommit a17f7554e6bd7f909b3652b308e341a45ff966bc[m
+Author: Alejandro Sanchez <aalejo@gm
