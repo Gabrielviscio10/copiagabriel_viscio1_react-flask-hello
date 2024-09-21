@@ -1,22 +1,22 @@
-import React, { useEffect, useContext } from 'react';
-import { useNavigate } from 'react-router-dom';
-import { Context } from '../store/appContext';
+import React, { useEffect, useContext } from "react";
+import { Context } from "../store/appContext";
+import { Navigate } from "react-router-dom";
 
-function Private() {
-    const { actions } = useContext(Context);
-    const navigate = useNavigate();
+const Private = () => {
+    const { store } = useContext(Context); // Asegúrate de obtener el contexto
 
-    useEffect(() => {
-        const validateUser = async () => {
-            const valid = await actions.validateToken();
-            if (!valid) {
-                navigate('/login'); // Redirigir al login si no es válido
-            }
-        };
-        validateUser();
-    }, [actions, navigate]);
+    // Suponiendo que tienes una forma de verificar si el usuario está autenticado
+    const userIsAuthenticated = store.token ? true : false; 
 
-    return <h1>Página Privada: Solo usuarios autenticados pueden ver esto.</h1>;
-}
+    if (!userIsAuthenticated) {
+        return <Navigate to="/login" />;
+    }
+
+    return (
+        <div>
+            <h2>Bienvenido a la página privada</h2>
+        </div>
+    );
+};
 
 export default Private;
