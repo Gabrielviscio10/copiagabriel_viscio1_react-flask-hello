@@ -22,20 +22,20 @@ function Navbar() {
 
     return (
         <div>
-            {/* Botón de iniciar/cerrar sesión */}
+           
             {!store.isAuthenticated ? (
-                <button onClick={handleLogin} className="login-button">
+                <button onClick={handleLogin} className="login-button btn btn-success">
                     Iniciar sesión
                 </button>
             ) : (
-                <button onClick={handleLogout} className="logout-button">
+                <button onClick={handleLogout} className="logout-button btn btn-danger">
                     Cerrar sesión
                 </button>
             )}
 
-            {/* Mostrar botón "Crear usuario" solo si NO hay una sesión iniciada */}
+          
             {!store.isAuthenticated && (
-                <button onClick={handleSignup} className="signup-button">
+                <button onClick={handleSignup} className="signup-button btn btn-primary">
                     Crear usuario
                 </button>
             )}

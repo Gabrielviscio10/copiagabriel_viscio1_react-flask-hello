@@ -3,9 +3,8 @@ import { Context } from "../store/appContext";
 import { Navigate } from "react-router-dom";
 
 const Private = () => {
-    const { store } = useContext(Context); // Asegúrate de obtener el contexto
+    const { store } = useContext(Context); 
 
-    // Suponiendo que tienes una forma de verificar si el usuario está autenticado
     const userIsAuthenticated = store.token ? true : false; 
 
     if (!userIsAuthenticated) {

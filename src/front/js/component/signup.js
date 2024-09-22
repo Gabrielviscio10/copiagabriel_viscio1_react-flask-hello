@@ -17,22 +17,36 @@ const Signup = () => {
     };
 
     return (
-        <div>
+        <div className="container mt-5">
             <h2>Registro de Usuario</h2>
             <form onSubmit={handleSubmit}>
-                <input
-                    type="email"
-                    placeholder="Correo electrónico"
-                    value={email}
-                    onChange={(e) => setEmail(e.target.value)}
-                />
-                <input
-                    type="password"
-                    placeholder="Contraseña"
-                    value={password}
-                    onChange={(e) => setPassword(e.target.value)}
-                />
-                <button type="submit">Registrarse</button>
+                <div className="mb-3">
+                    <label htmlFor="email" className="form-label">Correo electrónico</label>
+                    <input
+                        type="email"
+                        className="form-control"
+                        id="email"
+                        placeholder="name@example.com"
+                        value={email}
+                        onChange={(e) => setEmail(e.target.value)}
+                        required
+                    />
+                </div>
+                <div className="mb-3">
+                    <label htmlFor="password" className="form-label">Contraseña</label>
+                    <input
+                        type="password"
+                        className="form-control"
+                        id="password"
+                        placeholder="Contraseña"
+                        value={password}
+                        onChange={(e) => setPassword(e.target.value)}
+                        required
+                    />
+                </div>
+                <button type="submit" className="btn" style={{ backgroundColor: '#80B918', color: '#fff' }}>
+                    Registrarse
+                </button>
             </form>
         </div>
     );
