@@ -7,7 +7,7 @@ from flask_migrate import Migrate
 from flask_swagger import swagger
 from src.api.utils import APIException, generate_sitemap
 from src.api.models import db
-from src.api.routes import api
+from api.routes import api
 from src.api.admin import setup_admin
 from src.api.commands import setup_commands
 from flask_jwt_extended import JWTManager
